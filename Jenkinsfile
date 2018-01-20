@@ -97,7 +97,7 @@ input 'Please approve deployment'
 // and if multiple pipelines are executing,
 // newest is only one that will be allowed through, the rest are cancelled
 
-stage name: 'Deploy', concurrency: 1
+stage name: 'Deploy to Staging', concurrency: 1
 node {
     // write build number to the index page so I can see update
     sh "echo '<h1>${env.BUILD_DISPLAY_NAME}' >> app/index.html"
